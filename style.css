@@ -1,0 +1,238 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*************************************************
+**************************************************
+
+Website Name: Animated Circles - CSS
+Website Author: Tabitha Turton
+Author URL: tabithaturton.com
+Copyright 2017. All Rights Reserved.
+
+Color Guide
+***************
+blue - #032EEB - one
+lime - #00E500 - two
+scarlet - #9C1300 - three
+purple - #EE3BEB - four
+yellow - #EBE800 - five
+turquoise - #00E9EB - six
+lily white - #EBEBEB - seven
+
+*************************************************
+
+Type Guide
+***************
+
+
+Debugging Tools
+***************
+border: 1px solid #fff;
+
+*************************************************/
+
+/************************************************
+*************************************************
+0. CSS Reset ------------------------ 
+1. Universal Styles -----------------
+2. Main Body Styles ----------------- 
+3. Generic Styles ----------- 
+4. Animation Styles ------------------- 
+*************************************************
+************************************************/
+
+/*----------------------------------------------
+------------------------------------------------
+0. CSS Reset
+------------------------------------------------
+----------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*----------------------------------------------
+------------------------------------------------
+1. Universal Styles
+------------------------------------------------
+----------------------------------------------*/
+body {
+  font-family:;
+}
+
+h1 {
+  color: #4695C6;
+  font-family: sans-serif;
+}
+
+/*----------------------------------------------
+------------------------------------------------
+2. Main Body Styles
+------------------------------------------------
+----------------------------------------------*/
+.main-container {
+  background: #4695C6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.motion-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  position: relative;
+  width: 400px;
+}
+
+.motion-item {
+  height: 300px;
+  position: absolute;
+  width: 300px;
+}
+
+/*----------------------------------------------
+------------------------------------------------
+3. Generic Styles
+------------------------------------------------
+----------------------------------------------*/
+
+.circle {
+  border-radius: 150px;
+  opacity: .8;
+  animation-iteration-count: infinite;
+}
+
+.one {
+  border: 15px solid #4695C6;
+  animation-name: firstmotion;
+  animation-duration: 4s;
+}
+
+.two {
+  border: 15px solid #6BA552;
+  animation-name: firstmotion;
+  animation-direction: alternate;
+  animation-delay: .3s;
+  animation-duration: 4s;
+}
+
+.three {
+  border: 15px solid #4695C6;
+  animation-name: secondmotion;
+  animation-duration: 4s;
+}
+
+.four {
+  border: 15px solid #6BA552;
+  animation-name: secondmotion;
+  animation-delay: .3s;
+  animation-duration: 4s;
+}
+
+.five {
+  border: 15px solid rgb(70,149,198);
+  animation-name: thirdmotion;
+  animation-duration: 4s;
+}
+
+.six {
+  animation-name: thirdmotion;
+  animation-delay: .3s;
+  animation-duration: 4s;
+}
+
+.seven {
+  border: 15px solid rgb(70,149,198);
+  animation-name: fourthmotion;
+  animation-duration: 4s;
+}
+
+/*----------------------------------------------
+------------------------------------------------
+4. Animation Styles
+------------------------------------------------
+----------------------------------------------*/
+@keyframes firstmotion {
+  from {
+    margin-bottom: 5px;
+  }
+  25% {
+    margin-top: -5px;
+  }
+  50% {
+    margin-top: 0px;
+    margin-left: -5px;
+  }
+  
+  75% {
+    margin-left: 5px;
+  }
+  to {
+    margin-top: 5px;
+  }
+}
+
+@keyframes secondmotion {
+  from {
+    margin-top: 5px;
+  }
+  25% {
+    margin-bottom: -5px;
+  }
+  50% {
+    margin-bottom: 0px;
+    margin-right: -5px;
+  }
+  
+  75% {
+    margin-right: 5px;
+  }
+  to {
+    margin-bottom: 5px;
+  }
+}
+
+@keyframes thirdmotion {
+  from {
+    margin-right: 5px;
+  }
+  25% {
+    margin-left: -5px;
+  }
+  50% {
+    margin-left: 0px;
+    margin-top: -5px;
+  }
+  
+  75% {
+    margin-top: 5px;
+  }
+  to {
+    margin-left: 5px;
+  }
+}
+
+@keyframes fourthmotion {
+  from {
+    margin-left: 5px;
+  }
+  25% {
+    margin-right: -5px;
+  }
+  50% {
+    margin-right: 0px;
+    margin-top: -5px;
+  }
+  
+  75% {
+    margin-top: 5px;
+  }
+  to {
+    margin-right: 5px;
+  }
+}
